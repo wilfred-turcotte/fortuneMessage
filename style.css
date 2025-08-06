@@ -1,15 +1,54 @@
 * {}
 
+body {
+  background-color: #7E6578;
+}
+
 .fortuneTeller {
   margin: auto;
+  margin-top: 50px;
   width: 80%;
+  height: 80%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid red;
+
 }
 
 .genie {
   max-height: 450px;
   max-width: 450px;
+  opacity: 0;
+  animation: fadeIn 1.5s ease-in;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.faded-image {
+  display: block;
+  width: 450px;
+  height: auto;
+  mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0) 80%);
+  mask-repeat: no-repeat;
+  mask-size: 100% 100%;
+}
+
+#fortuneMessage {
+  transition: 1s;
+  transform: 1s;
+}
+
+#generate {
+  background-color: #C4C0CE;
+  color: #1F2136;
+  font-weight: 600;
+  border: none;
+  padding: 20px 20px;
+  font-size: 1.2em;
+  border-radius: 125px;
+  cursor: pointer;
 }
