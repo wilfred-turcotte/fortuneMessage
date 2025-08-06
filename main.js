@@ -1,3 +1,15 @@
+
+const greeting = ["Ah, a mere mortal dares approach the Great Moo-narch!",
+  "Hark! You stumble into the pasture of greatness.",
+  "Bow before your udderly magnificent bovine overlord.",
+  "Greetings, tiny one. I deign to grace you with my moo-sings.",
+  "Behold! The cow who moves mountains and milks destiny.",
+  "You’ve found the sacred field — now show some respect.",
+  "The stars shine brighter where I tread. Tread lightly, stranger.",
+  "I am the cream of creation — and you, merely skimmed milk.",
+  "Approach with reverence, for I am the moo-ster of fate.",
+  "Welcome, insignificant one. Prepare for moo-velous wisdom."]
+
 const fortunePartOne = ["Ahh, I see your truth",
   "The moo-n speaks to me",
   "The meadow separates and I see your future",
@@ -90,3 +102,21 @@ const fortunePartThree = ["so move forward and don’t look back at the barn.",
   "and you’ll drink deeply from the trough of clarity.",
   "if you stop chewing old regrets.",
   "and tomorrow will greet you like an open field."];
+
+// Core code
+// const fortune = fortunePartOne[Math.floor(Math.random() * fortunePartOne.length)] + ". " + fortunePartTwo[Math.floor(Math.random() * fortunePartTwo.length)] + ", " + fortunePartThree[Math.floor(Math.random() * fortunePartThree.length)];
+
+// document.getElementById("fortuneMessage").innerHTML = fortune;
+
+document.getElementById("generate").addEventListener("click", generateFortune);
+
+document.getElementById("fortuneMessage").innerHTML = greeting[Math.floor(Math.random() * greeting.length)];
+
+function generateFortune () {
+
+  const fortune = fortunePartOne[Math.floor(Math.random() * fortunePartOne.length)] + ". " + fortunePartTwo[Math.floor(Math.random() * fortunePartTwo.length)] + ", " + fortunePartThree[Math.floor(Math.random() * fortunePartThree.length)];
+
+  document.getElementById("fortuneMessage").innerHTML = fortune;
+  console.log(fortune);
+}
+..A neopet style magical black and white cow genie floating in a mist of purple with blades of grass wearing a headwrap and looking "better than thou" and superior all knowing in a comedic friendly way
