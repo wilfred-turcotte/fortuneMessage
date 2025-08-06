@@ -103,11 +103,6 @@ const fortunePartThree = ["so move forward and don’t look back at the barn.",
   "if you stop chewing old regrets.",
   "and tomorrow will greet you like an open field."];
 
-// Core code
-// const fortune = fortunePartOne[Math.floor(Math.random() * fortunePartOne.length)] + ". " + fortunePartTwo[Math.floor(Math.random() * fortunePartTwo.length)] + ", " + fortunePartThree[Math.floor(Math.random() * fortunePartThree.length)];
-
-// document.getElementById("fortuneMessage").innerHTML = fortune;
-
 document.getElementById("generate").addEventListener("click", generateFortune);
 
 document.getElementById("fortuneMessage").innerHTML = greeting[Math.floor(Math.random() * greeting.length)];
