@@ -1,7 +1,10 @@
+@import url(animate.css);
+
 * {}
 
 body {
   background-color: #7E6578;
+  overflow-x: hidden;
 }
 
 .fortuneTeller {
@@ -15,18 +18,20 @@ body {
 
 }
 
+.fortuneTeller img {
+  opacity: 0%;
+  animation: summon 2s ease-out 0.5s alternate forwards,
+    float 4s ease-in-out 2.5s infinite;
+  margin: 0px auto;
+  z-index: -1;
+}
+
 .genie {
   max-height: 450px;
   max-width: 450px;
   opacity: 0;
-  animation: fadeIn 1.5s ease-in;
 }
 
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-  }
-}
 
 .faded-image {
   display: block;
@@ -37,11 +42,30 @@ body {
   mask-size: 100% 100%;
 }
 
-#fortuneMessage {
-  transition: 1s;
-  transform: 1s;
+
+
+p {
+  font-family: "Cherry Bomb One", system-ui;
+  font-size: 1.75em;
+  width: 95%;
+  text-align: center;
+  margin: 12px auto;
+  color: #d8e1e7;
+  text-shadow: 0px 0px 10px rgba(99, 6, 143, 0.5);
+  opacity: 0;
 }
 
+#fortuneIntro {
+  margin-top: -25px;
+  animation: fadeIn 2s ease-in-out 1s 1 forwards;
+}
+
+#fortuneMessage {
+  max-width: 547px;
+  animation: fadeIn 2s ease-in-out 1s 1 forwards;
+}
+
+/* button style */
 #generate {
   background-color: #C4C0CE;
   color: #1F2136;
@@ -51,4 +75,7 @@ body {
   font-size: 1.2em;
   border-radius: 125px;
   cursor: pointer;
+  margin: 10px auto 50px auto;
+  opacity: 0;
+  animation: fadeIn 2s ease-in-out 1s 1 forwards;
 }

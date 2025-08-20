@@ -107,12 +107,26 @@ const fortunePartThree = ["so move forward and don’t look back at the barn.",
 document.getElementById("generate").addEventListener("click", generateFortune);
 
 // Generate a greeting message
-document.getElementById("fortuneMessage").innerHTML = greeting[Math.floor(Math.random() * greeting.length)];
+document.getElementById("fortuneIntro").innerHTML = greeting[Math.floor(Math.random() * greeting.length)];
 
 // Generate a fortune by randomly selecting parts from fortune arrays
+
+// *** Old Fortune Message Generation ***
+
+// function generateFortune () {
+
+//   const fortune = fortunePartOne[Math.floor(Math.random() * fortunePartOne.length)] + ". " + fortunePartTwo[Math.floor(Math.random() * fortunePartTwo.length)] + ", " + fortunePartThree[Math.floor(Math.random() * fortunePartThree.length)];
+//   document.getElementById("fortuneMessage").innerHTML = fortune;
+//   console.log(fortune);
+// }
+// *** Old Fortune Message Generation End ***
+
 function generateFortune () {
 
-  const fortune = fortunePartOne[Math.floor(Math.random() * fortunePartOne.length)] + ". " + fortunePartTwo[Math.floor(Math.random() * fortunePartTwo.length)] + ", " + fortunePartThree[Math.floor(Math.random() * fortunePartThree.length)];
-  document.getElementById("fortuneMessage").innerHTML = fortune;
+  const fortuneIntro = fortunePartOne[Math.floor(Math.random() * fortunePartOne.length)] + ".";
+  const fortuneMessage = fortunePartTwo[Math.floor(Math.random() * fortunePartTwo.length)] + ", " + fortunePartThree[Math.floor(Math.random() * fortunePartThree.length)]
+  document.getElementById("fortuneIntro").innerHTML = fortuneIntro;
+  document.getElementById("fortuneMessage").innerHTML = fortuneMessage;
   console.log(fortune);
 }
+
